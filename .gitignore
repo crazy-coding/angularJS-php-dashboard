@@ -1,0 +1,35 @@
+node_modules/
+storage/logs/v.txt
+old/
+storage/
+storage/qrcode.png
+/config.php
+error_log
+access.log
+error.log
+
+#----------------------------------------------------------------------------
+# MISC
+#----------------------------------------------------------------------------
+.*cache
+*.log
+*.maintenance
+cache/*
+backup
+_files
+log
+log/**/*
+.monitor
+Forwardfile
+
+# OS X Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.lnk
+*~
+
+# IDE FILES
+*.sublime-*
+*.tmproj

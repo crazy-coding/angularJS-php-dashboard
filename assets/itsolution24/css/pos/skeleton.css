@@ -1,0 +1,70 @@
+/*                                                                             *
+ *=============================================================================*
+ *                          POS Skeleton Style             					   *
+ *=============================================================================*
+ *                                                                             *
+ */
+ /*
+ * POS skeleton is a shadow structure which work as a preloader
+ */
+#skeleton {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: #ffffff;
+	width: 100%;
+	height: 100%;
+    z-index: 1031;
+}
+.skeleton-topbar:empty {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background-image: linear-gradient( lightgreen 50px, transparent 0 );
+	background-repeat: repeat-y;
+	background-size: 100% 50px;
+	background-position: 0 0;
+	z-index: 9999;
+}
+.skeleton-sidebar:empty {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 100%;
+	background-image:
+		linear-gradient( 90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+		linear-gradient( lightblue 15px, transparent 0 );
+	background-repeat: repeat-y;
+	background-size: 50% 100%, 40px 30px;
+	background-position: 0 0, 5px 0;
+	z-index: 1000;
+	animation: shine-sidebar 1s infinite;
+}
+.skeleton-left-side:empty {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image:
+		linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+		linear-gradient( #f6f6f6 80px, transparent 0 );
+	background-repeat: repeat-y;
+	background-size: 50% 100%, 100% 90px;
+	background-position: 50px 0, 50px 110px;
+	z-index: 1000;
+	animation: shine-leftside .9s infinite;
+}
+@keyframes shine-sidebar {
+	to {
+		background-position: 100% 0, 5px 0;
+	}
+}
+@keyframes shine-leftside {
+	to {
+		background-position: 100% 0, 50px 110px;
+	}
+}

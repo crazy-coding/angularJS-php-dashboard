@@ -1,0 +1,25 @@
+* {
+	border-radius: 0!important;
+}
+.bg-database{
+	background-color: #fffefc;
+}
+.bg-white{
+	background-color:#ffffff;
+}
+p.control-label {
+	text-align: left!important;
+	font-style: italic;
+	color: #FF5500!important;
+}
+
+@media (max-width: 480px) {
+	.nav-pills>li {
+		width: 50%;
+		text-align: center;
+	}
+
+	.nav-pills>li+li {
+		margin-left: 0;
+	}
+}

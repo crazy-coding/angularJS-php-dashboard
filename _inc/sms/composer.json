@@ -1,0 +1,19 @@
+{
+    "name": "w3space11/sms-gateway",
+    "authors": [
+        {
+            "name": "w3space",
+            "email": "techbuzz69@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": [
+        	"_inc/"
+        ],
+        "psr-4": {
+            "SMSGateway\\Gateway\\": "_inc/gateway/"
+        },
+        "files": []
+    }
+}

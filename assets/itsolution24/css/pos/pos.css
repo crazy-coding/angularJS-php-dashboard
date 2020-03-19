@@ -1,0 +1,797 @@
+/*
+ ***********************************************************
+ ***********************************************************
+ *
+ *  Product Name  :   POS & Advanced Stock Management System
+ *  Product URI   :   http://itsolution24.com/pos
+ *  Version       :   1.0.0
+ *  Author        :   ITsolution24
+ *  Author URI    :   ITsolution24.com
+ *  License       :   MIT
+ *  License URI   :   
+ *
+ *
+ *  Core: General Layout Style
+ * 
+ ************************************************************
+ ************************************************************
+ */
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+ * TABLE OF CONTENTS
+ *_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+ *
+ * 1.0. GENERAL
+ * 2.0. PRODUCT LIST SECTION
+ 		2.01. Search Box Area
+ 		2.02. Product List Area
+ 		2.03. Pagination
+ 		2.04. Payable Amount Display Area
+ * 3.0. INVOICE SECTION
+		3.01. Customer Area
+ 		3.02. Invoice Item Area
+ 		3.03. Invoice Calculation Area
+ 		3.04. Pay Button
+ * 4.0. PAYMENT FORM
+/*                                                                             *
+ *=============================================================================*
+ *                                1.0.  START GENERAL                          *
+ *=============================================================================*
+ *                                                                             *
+ */
+
+* {
+	margin:0;
+	padding:0;
+}
+a:focus, 
+a:hover, 
+a:active {
+    outline: 0 none;
+}
+body {
+	overflow: hidden;
+	background-color: #ecf0f5;
+}
+.svg-icon {
+	width: 20px;
+	height: 20px;
+}
+.margin-b20{
+	margin-bottom:20px;
+}
+.context-menu-list {
+    border-radius: 0!important;  
+    outline: 0 none;
+}
+.form-control,
+.form-group-lg .form-control, 
+.input-lg,
+.pos .btn {
+	border-radius: 0;
+}
+.min-height {
+	min-height: 355px;
+	margin-bottom: 0;
+}
+.sidebar-toggle {
+	display: none;
+}
+.btn, 
+.btn-group, 
+.btn-group-vertical, 
+.caret, 
+.checkbox-inline,
+.fa-stack, 
+.radio-inline, 
+img {
+    vertical-align: middle;
+}
+.visible {
+	visibility: visible!important;
+}
+#minicart {
+	display: none;
+}
+.modal-open {
+     margin-right: 0; 
+}
+.modal-lg {
+	width: 98%;
+}
+.modal-content {
+	border-radius: 0;
+}
+.modal-content h3 {
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+.modal-lg .modal-content .modal-header {
+	border: none;
+}
+.context-menu-list {
+	max-width: 200px;
+}
+.add-quantity-box input,
+.add-quantity-box button {
+	padding: 3px;
+	color: #000000;
+}
+.pos-content-wrapper {
+	display:none;
+}
+.pos .content-area {
+	position: absolute;
+	display: table;
+	right: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    min-width: 1080px;
+    min-width: 100%;
+    z-index: 840;
+}
+.pos .row-group {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+.pos .content-row {
+	display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.pos .pos-content {
+	display: table-cell;
+    vertical-align: top;
+    -webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+.pos .pos .pos-content .contents {
+    padding: 0;
+    position: relative;
+}
+#left-panel {
+	width: 65%;
+}
+#left-panel .ajax-loader {
+	position: absolute;
+	top: 50px;
+	right: 50%;
+	height: 80px;
+	width: 80px;
+	background-color: #fff;
+	padding: 5px;
+	border-radius: 10px;
+	margin-right: -40px;
+	box-shadow: 0 0 50px rgba(0,0,0,0.5);
+	z-index: 1080;
+}
+#left-panel .ajax-loader img {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#right-panel {
+	width: 35%;
+}
+
+/*End General*/
+/*                                                                             *
+ *=============================================================================*
+ *                        2.0.  Product List Section Start                     *
+ *=============================================================================*
+ *                                                                             *
+ */
+/*
+---------------------------------------
+    2.01. Start Searchbox Area
+---------------------------------------
+*/
+#searchbox {
+	margin-bottom: 2px;
+    position: relative;
+    box-shadow: -1px 3px 3px rgba(0,0,0,0.2);
+    z-index: 1050;
+}
+#searchbox .search-btn {
+	position: absolute;
+	content: "";
+	height:20px;
+	width: 20px;
+	top:50%;
+	left:20px;
+	margin-top: -8px;
+}
+#searchbox input {
+    width: 100%;
+    font-size: 1.8rem;
+    color: #999;
+    font-weight: 700;
+    text-indent: 35px;
+    height: 50px;
+    padding: 10px 260px 10px 10px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+}
+#searchbox input:focus,
+#searchbox input:active {
+	outline: none;
+}
+#searchbox .category-search {
+	position: absolute;
+	width: 250px;
+	top: 7px;
+	right: 10px;
+	border-radius: 50px;
+}
+#searchbox .category-search .select2-container--default .select2-selection--single {
+    border-radius: 50px;
+    border: 2px solid #ccc;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+/* End Search Box Area */
+
+/*
+-------------------------------------------
+    2.02. start product list area
+-------------------------------------------
+*/
+#item-list {
+    padding: 0 1px 0 1px;
+    min-height: 50px;
+    overflow: scroll;
+    position: relative;
+}
+.left-panel #item-list {
+	margin-right: 35px;
+	margin-left: 0;
+}
+.right-panel #item-list {
+	margin-left: 35px;
+	margin-right: 0;
+}
+#item-list .item {
+    width: 16.666%;
+    padding: 0;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    white-space: unset;	
+}
+#item-list .item .item-inner {
+	position: relative;
+    margin: 0 3px 3px 3px;
+    background-color: #ffffff;
+    border: 1px solid #03ce71;
+    box-shadow: 0 0 5px rgba(0,0,0,0.9);
+    cursor: pointer;
+    overflow: hidden;
+}
+#item-list .item.select .item-inner {
+    border-color: #f39c12;
+    border-width: 3px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+}
+#item-list .item .item-img img {
+	display: inline-block;
+	max-width: 100%;
+    max-height: 100%;
+    height: 80px;
+}
+#item-list .item .item-info {
+	display: block;
+    overflow: hidden;
+}
+#item-list .item .item-info span {
+    display: block;
+    position: relative;
+    height: 70px;
+    color: #0a0a0a;
+    word-break: break-all;
+    font-weight: 700;
+    line-height: 16px;
+    padding: 5px 5px;
+    vertical-align: unset;
+    padding-top: 15px;
+}
+#item-list .item .item-mask {
+    position: relative;
+    height: 35px;
+    width: 100%;
+    margin-left: 0px;
+    background-color: #f39c12;
+    -webkit-transition: .3s;
+    transition: .3s;
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+}
+#item-list .item .item-mask .svg-icon {
+    display: inline-block;
+    width: 10%;
+    height: 100%;
+    margin: 0;
+    float: left;
+}
+#item-list .item .item-mask span {
+	width: 90%;
+	float: left;
+	font-size: 1.6rem;
+	line-height: 22px;
+	color: #fff;
+}
+.add-new-product-wrapper {
+	display: none;
+	height: 100%;
+}
+.add-new-product {
+	display: table;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.add-new-product-btn {
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgba(5, 5, 5, 0.5);
+}
+.add-new-product-btn .svg-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.add-new-product-btn .btn {
+	border-radius: 50px;
+    border: 5px solid #e59287;
+}
+/* End Product List Area */
+
+/*
+---------------------------------------------
+    2.3. Start Pagination
+---------------------------------------------
+*/
+
+/*.pos-product-pagination {
+	margin: 10px 0;
+}*/
+
+.pos-product-pagination > .pagination {
+	margin: 10px 6px;
+	padding: 0;
+}
+
+.pos-product-pagination > .pagination > li > span {
+	margin-right: -3px;
+}
+
+.pos-product-pagination > .pagination > li > a, 
+.pos-product-pagination > .pagination > li > span {
+	padding: 0 6px;
+	border-radius: 50px;
+	margin-right: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	border: 2px solid #fff;
+}
+
+/* End Pagination */
+
+/*
+---------------------------------------------
+    2.4. Start Payable Amount Display Area
+---------------------------------------------
+*/
+
+#total-amount {
+	position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: #00a65a;
+    border-top: 1px solid #ffffff;
+    box-shadow: -1px -3px 3px rgba(0,0,0,0.3);
+}
+#total-amount .total-amount-inner {
+	text-align: center;
+	color: #ffffff;
+}
+#total-amount .total-amount-inner .currency-symbol {
+	font-size: 2em;
+}
+#total-amount .total-amount-inner span {
+	display: inline-block;
+}
+#total-amount .total-amount-inner .main-amount {
+	z-index: 1003;
+    font-size: 4em;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+#invoice-note {
+	position: absolute;
+	display: block;
+	top: 50%;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	cursor: pointer;
+}
+#invoice-note .fa {
+	font-size: 18px;
+    color: #ffffff;
+    padding: 5px;
+}
+#invoice-note .fa:hover  {
+	color: #ffeed2;
+}
+/* End Payable Amount Display Area */
+
+/*End Product section*/
+/*                                                                             *
+ *=============================================================================*
+ *                             3.0. Invoice Section Start                      *
+ *=============================================================================*
+ *                                                                             *
+ */
+
+.invoice-area .well-sm {
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    background-color: #ffffff;
+}
+.invoice-area .table {
+	margin-bottom: -2px;
+}
+/*
+-------------------------------------------
+    3.01. start customer area 
+-------------------------------------------
+*/
+#customer-area {
+	position: relative;
+    border-bottom: 2px solid #026c3c;
+}
+#customer-area > input {
+	width: 100%;
+	height: 50px;
+    color: #424242;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border: none;
+    padding-left: 40px;
+    background-color: #04c46c;
+    cursor: pointer;
+}
+#customer-area .customer-icon {
+	position: absolute;
+	top: 50%;
+	left:10px;
+	margin-top:-15px;
+}
+#customer-area .customer-icon .svg-icon {
+	height:25px;
+	width:25px;
+}
+#customer-area .previous-due {
+    position: absolute;
+    text-align: center;
+    right: 60px;
+    top: 0;
+    height: 100%;
+    background-color: #04c46c;
+}
+#customer-area .previous-due h4 {
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 3px;
+    margin-top: 5px;
+    width: 80px;
+}
+#customer-area .previous-due span {
+	display: block;
+    color: #fff;
+    margin-top: 3px;
+    padding: 5px 15px;
+    border: 2px solid #ff9090;
+    border-radius: 50px;
+}
+#customer-area .add-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height:100%;
+	cursor: pointer;
+}
+#customer-area .add-icon .svg-icon {
+    height: 25px;
+    width: 25px;
+    margin: 12px 0 0 20px;
+}
+#customer-area .slidedown-menu {
+	position: absolute;
+	top: 52px;
+	z-index: 890;
+}
+#customer-area .slidedown-menu .slidedown-footer {
+	padding: 10px;
+	border-top: 1px solid #dddddd;
+}
+#customer-area .slidedown-menu ul.customer-list > li {
+	border-bottom: 1px dotted #dddddd;
+	-webkit-transition: all .1s linear;
+	transition: all .1s linear;
+}
+#customer-area .slidedown-menu ul.customer-list {
+	margin-bottom: 0;
+}
+#customer-area .slidedown-menu ul.customer-list > li:last-child {
+	border-bottom-color: transparent;
+}
+#customer-area .slidedown-menu ul.customer-list > li:hover {
+	background-color: #FF0000;
+}
+#customer-area .slidedown-menu ul.customer-list > li > a {
+	display: block;
+	padding:10px;
+}
+#customer-area .slidedown-menu ul.customer-list > li:hover a {
+	text-decoration: none;
+	color: #ffffff;
+}
+#customer-area .slidedown-menu {
+	width: 100%;
+	max-height: 378px;
+	background-color: #ffffff;
+	box-shadow: -5px 5px 5px rgba(0,0,0,0.5);
+	overflow-y: scroll;
+}
+#customer-area .slidedown-menu:before {
+	position: absolute;
+	content: "";
+	top: -10px;
+	left: 15px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #ffffff;
+	z-index: 891px;
+}
+#customer-area .slidedown-menu .slidedown-footer {
+	background-color: #f7a1a1;
+}
+#customer-area .slidedown-menu .slidedown-footer a {
+	color: #000000;
+}
+/* end customer area */
+
+/*
+---------------------------------------
+    3.2. Start Invoice Item Area
+---------------------------------------
+*/
+#invoice-item {
+	position: relative;
+}
+#invoice-item .table input[type='number'] {
+	width: 40px;
+}
+#invoice-item-head thead tr th {
+	font-size: 1.2rem;
+	padding: 3px;
+}
+#invoice-item-head thead tr {
+	background-color: #f4f4f4;
+}
+#invoice-item-head thead tr th:nth-child(1) {
+	width: 50px;
+	text-align: center;
+}
+#invoice-item-head thead tr th:nth-child(2) {
+	width: 150px;
+	text-align: center;
+}
+#invoice-item-head thead tr th:nth-child(3) {
+	width: 50px;
+	text-align: right;
+}
+#invoice-item-head thead tr th:nth-child(4) {
+	width: 70px;
+	text-align: right;
+}
+#invoice-item-head thead tr th:nth-child(5) {
+	width:50px;
+	text-align:center;
+}
+
+#invoice-item-list {
+	position: relative;
+	min-height: 130px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+#invoice-item-list .invoice-item {
+	background-color: #f7fffb;
+}
+#invoice-item-list table tbody td {
+	position: relative;
+	vertical-align: middle;
+	padding: 0 3px;
+}
+#invoice-item-list table tbody td.product-quantity {
+	width:40px;
+	text-align:center;
+}
+#invoice-item-list .product-quantity button {
+	width: 100%;
+	line-height: 0;
+	padding: 0;
+    margin: 0;
+}
+#invoice-item-list .product-quantity button.btn-up {
+	position: relative;
+    color: #ffffff;
+    background-color: #bef1d9;
+}
+#invoice-item-list .product-quantity button.btn-down {
+    color: #ffffff;
+    background-color: #fddeda;
+    margin-bottom: 4px;
+}
+#invoice-item-list .invoice-item .delete-icon {
+	height: 14px;
+	width: 14px;
+	cursor: pointer;
+}
+#invoice-item-list .invoice-item .product-name {
+	width:150px;
+}
+#invoice-item-list .invoice-item .product-name span {
+	display: block;
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 5px 10px;
+    background-color: #026c3c;
+    border: 2px solid #e7fff4;
+    border-radius: 20px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.3);
+}
+#invoice-item-list .invoice-item .product-price {
+	width: 50px;
+	text-align: right;
+}
+#invoice-item-list .invoice-item .product-subtotal {
+	width: 70px;
+	text-align: right;
+}
+#invoice-item-list .invoice-item .product-delete {
+	width: 50px;
+	text-align:center;
+}
+/* End Invoice Item Area */
+
+/*
+----------------------------------------------
+   3.03. start invoice calculation area
+----------------------------------------------
+*/
+
+#invoice-calculation {
+	position: relative;
+	font-weight: 700;
+	text-align: right;
+	text-transform: uppercase;
+	border-top: 2px solid #00A65B;
+}
+#invoice-calculation .table tbody tr.row1 {
+	background-color: #f4f4f4;
+}
+#invoice-calculation .table tbody tr.row2 {
+	background-color: #ffeed2;
+}
+.pay-top td input {
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	border: none;
+}
+/* End Invoice Calculation Area */
+
+/*
+-----------------------------------------------
+    3.04. start pay button
+----------------------------------------------
+*/
+
+#pay-button button {
+	height: 80px;
+    color: #ffffff;
+    font-size: 2.5em;
+    background-color: #f39c12;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+ /* End Pay Button */
+
+/*Invoice Section End*/
+
+/*                                                                             *
+ *=============================================================================*
+ *                                4.0. Vertical Toolbar                 *
+ *=============================================================================*
+ *                                                                             *
+ *
+ */
+
+#vertial-toolbar {
+    position: absolute;
+    top: 100px;
+    bottom: 84px;
+    z-index: 841;
+    width: 35px;
+    background: #fff;
+    padding: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.left-panel #vertial-toolbar  {
+	right: 0;
+	border-radius: 5px 0 0 5px;
+}
+.right-panel #vertial-toolbar  {
+	left: 0;
+	border-radius: 0 5px 5px 0;
+}
+#vertial-toolbar .toolbar-icon {
+	position: relative;
+	background: #357CA5;
+	color: #fff;
+	text-align: center;
+	height: 30px;
+	display: block;
+	line-height: 30px;
+	margin-bottom: 3px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+#vertial-toolbar .toolbar-icon.selected {
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	border: 2px solid #FCF4AC;
+}
+#vertial-toolbar .toolbar-icon .expand {
+	display: none;
+	position: absolute;
+    left: 22px;
+    background: #357CA5;
+    width: 70px;
+    border-radius: 0 5px 5px 0;
+    height: 100%;
+    text-align: left;
+    padding-left: 5px;
+    transition: all 0.5s linear;
+}
+#vertial-toolbar .toolbar-icon.selected .expand:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    border-radius: 0 5px 5px 0;
+    border-top: 2px solid #FCF4AC;
+    border-right: 2px solid #FCF4AC;
+    border-bottom: 2px solid #FCF4AC;
+}
+#vertial-toolbar .toolbar-icon:hover .expand {
+	display: block;
+}
+#vertial-toolbar .toolbar-icon .fa {
+	width: 100%;
+}

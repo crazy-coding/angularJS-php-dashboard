@@ -1,0 +1,96 @@
+#filemanager .modal {
+  word-wrap: break-word;
+}
+
+#filemanager .modal .label.error-msg {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+  padding: 0;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+#filemanager .modal .label.error-msg > span {
+  white-space: pre-wrap;
+}
+
+#filemanager .modal .breadcrumb {
+  margin: 0;
+  background: #00bcd4;
+  font-size: 16px;
+  max-height: inherit;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+
+#filemanager .modal-fullscreen .modal-dialog,
+#filemanager .modal-fullscreen .modal-content {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#filemanager .modal-fullscreen .modal-dialog {
+  margin: 0;
+  width: 100%;
+}
+
+#filemanager .modal-fullscreen .modal-content {
+  border: none;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inherit;
+  -moz-box-shadow: inherit;
+  -o-box-shadow: inherit;
+  box-shadow: inherit;
+}
+
+#filemanager .modal-fullscreen textarea.code {
+  min-height: 450px;
+}
+
+#filemanager .modal img.preview {
+  max-width: 100%;
+  max-height: 640px;
+  border-radius: 3px;
+}
+
+#filemanager .modal img.preview.loading {
+  width: 100%;
+  height: 1px;
+  opacity: 0;
+}
+
+
+#filemanager .modal .modal-content {
+    border-radius: 10px 10px 4px 4px;
+}
+
+#filemanager .modal .modal-header {
+    border-radius: 4px 4px 0 0;
+    background: #2196F3;
+    padding: 1.3em;
+}
+
+#filemanager .modal .modal-header .modal-title {
+    font-size: 20px;
+    line-height: 100%;
+    color: #D4E5F5;
+    margin: 0;
+}
+
+#filemanager .modal .modal-header .close {
+    opacity: 1;
+    color: #D4E5F5;
+}
+
+#filemanager .modal .modal-header .close.fullscreen {
+    font-size: 14px;
+    position: relative;
+    top: 4px;
+    margin-right: .8em;
+}

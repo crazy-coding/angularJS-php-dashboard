@@ -1,0 +1,247 @@
+/*
+ * Skin: Green
+ * -----------
+ */
+.skin-green .main-header .navbar {
+  background-color: #00a65a;
+}
+.skin-green .main-header .navbar .nav > li > a {
+  color: #ffffff;
+}
+.skin-green .main-header .navbar .nav > li > a:hover,
+.skin-green .main-header .navbar .nav > li > a:active,
+.skin-green .main-header .navbar .nav > li > a:focus,
+.skin-green .main-header .navbar .nav .open > a,
+.skin-green .main-header .navbar .nav .open > a:hover,
+.skin-green .main-header .navbar .nav .open > a:focus,
+.skin-green .main-header .navbar .nav > .active > a {
+  background: rgba(0, 0, 0, 0.1);
+  color: #f6f6f6;
+}
+.skin-green .main-header .navbar .sidebar-toggle {
+  color: #ffffff;
+}
+.skin-green .main-header .navbar .sidebar-toggle:hover {
+  color: #f6f6f6;
+  background: rgba(0, 0, 0, 0.1);
+}
+.skin-green .main-header .navbar .sidebar-toggle {
+  color: #fff;
+}
+.skin-green .main-header .navbar .sidebar-toggle:hover {
+  background-color: #008d4c;
+}
+@media (max-width: 767px) {
+  .skin-green .main-header .navbar .dropdown-menu li.divider {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .skin-green .main-header .navbar .dropdown-menu li a {
+    color: #fff;
+  }
+  .skin-green .main-header .navbar .dropdown-menu li a:hover {
+    background: #008d4c;
+  }
+}
+.skin-green .main-header .logo {
+  background-color: #008d4c;
+  color: #ffffff;
+  border-bottom: 0 solid transparent;
+}
+.skin-green .main-header .logo:hover {
+  background-color: #008749;
+}
+.skin-green .main-header li.user-header {
+  background-color: #00a65a;
+}
+.skin-green .content-header {
+  background: transparent;
+}
+.skin-green .wrapper,
+.skin-green .main-sidebar,
+.skin-green .left-side {
+  background-color: #222d32;
+}
+.skin-green .user-panel > .info,
+.skin-green .user-panel > .info > a {
+  color: #fff;
+}
+.skin-green .sidebar-menu > li.header {
+  color: #4b646f;
+  background: #1a2226;
+}
+.skin-green .sidebar-menu > li > a {
+  border-left: 3px solid transparent;
+}
+.skin-green .sidebar-menu > li:hover > a,
+.skin-green .sidebar-menu > li.active > a {
+  color: #ffffff;
+  background: #1e282c;
+  border-left-color: #00a65a;
+}
+.skin-green .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+  background: #2c3b41;
+}
+.skin-green .sidebar a {
+  color: #b8c7ce;
+}
+.skin-green .sidebar a:hover {
+  text-decoration: none;
+}
+.skin-green .treeview-menu > li > a {
+  color: #8aa4af;
+}
+.skin-green .treeview-menu > li.active > a,
+.skin-green .treeview-menu > li > a:hover {
+  color: #ffffff;
+}
+.skin-green .sidebar-form {
+  border-radius: 3px;
+  border: 1px solid #374850;
+  margin: 10px 10px;
+}
+.skin-green .sidebar-form input[type="text"],
+.skin-green .sidebar-form .btn {
+  box-shadow: none;
+  background-color: #374850;
+  border: 1px solid transparent;
+  height: 35px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.skin-green .sidebar-form input[type="text"] {
+  color: #666;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+}
+.skin-green .sidebar-form input[type="text"]:focus,
+.skin-green .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  background-color: #fff;
+  color: #666;
+}
+.skin-green .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  border-left-color: #fff;
+}
+.skin-green .sidebar-form .btn {
+  color: #999;
+  border-top-left-radius: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+}
+.skin-green .user-panel {background-color: #035a32;}
+.skin-green .user-panel > .info > a .fa {color: #00A65A;}
+.skin-green #info-bar {background-color: #00A65A;}
+.skin-green #info-bar .total_amount_display {color: #fff;}
+.skin-green #save-invoice-btn {background-color:#06864b;color:#fff;transition:0.3s;}
+.skin-green #save-invoice-btn:hover {background-color:#035a32;}
+.skin-green .meme-customer-info {background-color: #e2f5ff;}
+.skin-green .calculation-box {background-color: #e2f5ff;}
+.skin-green #toggle_customer {background-color:#e2f5ff;color:#000000;border:1px solid #00A65A;-webkit-transition:0.3s;-o-transition:0.3s;transition:0.5s;}
+.skin-green #toggle_customer:hover {color:#00A65A;}
+.skin-green .modal-header {background-color:#00A65A;}
+.skin-green .modal-title {color:#fff;}
+.skin-green .navbar-custom-menu>.navbar-nav>li:hover>a:after, 
+.skin-green .navbar-custom-menu>.navbar-nav>li.active>a:after {
+  border-top-color: #009551;
+}
+
+/*
+ * POS Skin: green
+ * ---------------
+ */
+.skin-green .customer-name > input {
+  color: #31708f;
+  background-color: #ceecdd;
+  border-bottom: 2px solid #016f3d;
+}
+.skin-green .previous-due {
+  background-color: #016f3d;
+}
+.skin-green .previous-due h4 {
+      color: #fff;
+}
+.skin-green .previous-due span {
+  background-color: #DD4B39;
+}
+.skin-green #total-amount {
+  background-color: #f39c12;
+}
+.skin-green .total-amount-inner {
+  color: #fff;
+}
+.skin-green #list-table-head tr {
+  background-color: #09ff8e;
+}
+.skin-green #invoice-note .fa {
+    color: #ffffff;
+}
+.skin-green .total-cal {
+  border-top: 3px solid #015d33;
+}
+.skin-green .paynow-btn {
+  color: #fff;
+  background-color: #00a65a;
+  border-color: #008d4c;
+}
+.skin-green .pay-top td input {
+  background-color: #008d4c;
+    color: #fff;
+}
+.skin-green #totaltbl table tr.row1, 
+.skin-green #totaltbl table tr.row2 {
+  background-color: #b5ead2;
+}
+.skin-green #totaltbl table tr.row3 {
+  background-color: #09ff8e;
+}
+.skin-green .contents #item-list .btn-both .bg-img {
+  background: #FFF;
+}
+.skin-green .contents #item-list .btn-both span {
+  background: #016f3d;
+    color: #ffffff;
+}
+.skin-green #list-table-div table tr {
+  background-color: #effbf5;
+}
+.skin-green .product-name span {
+    border: 1px solid #015d33;
+    background-color: #00a75b;
+    color: #ffffff;
+}
+.skin-green .product-quantity button {
+  background-color: transparent;
+}
+.skin-green .contents #item-list .btn-both .product-select {
+  background-color: rgba(0, 166, 90, 0.23);
+}
+.skin-green .add-icon {
+  background-color: #f39c12;
+}
+.skin-green #pay-button button {
+  background-color: #008d4c;
+  color: #ffffff;
+}
+.skin-green #item-list .item .item-mask {
+  background-color: #000000;
+}
+.skin-green #invoice-calculation .table tbody tr.row2 {
+  color: #000000;
+  background-color: #dddddd;
+}
+.skin-green #invoice-calculation .table tbody tr.row3 {
+  color: #000000;
+  background-color: #ffffff;
+}
+.skin-green #invoice-calculation .table tbody tr td input {
+  color: #ffffff;
+  background-color: #424242;
+  border-radius: 50px;
+}
+.skin-green #customer-area > input {
+    background-color: #fdddaa;
+}

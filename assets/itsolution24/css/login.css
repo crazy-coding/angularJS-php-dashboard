@@ -1,0 +1,74 @@
+/* Login style start */
+.btn, 
+.alert {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+.icon-svg {
+    width: 15px;
+    height: 14px;
+    margin-right: 5px;
+}
+.store-list .list-group-item {
+  display: table;
+  width: 100%;
+}
+.store-list .list-group-item a {
+  display: table-row;
+}
+.store-list .store-icon,
+.store-list .store-name {
+  display: table-cell;
+  vertical-align: middle;
+}  
+.store-list .store-icon {
+  width: 10%;
+}
+.store-list .store-name {
+  width: 90%;
+  font-weight: 700;
+}
+.login-logo .text {
+    color: #337ab7;
+    font-family: Helvetica, Sans-Serif;
+    font-size: 22px;
+    text-shadow: 10px 10px 3px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    color:#FF0A00;
+}
+.login-box-body {
+    border: 5px solid #59b78c;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -o-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.login-box-body .svg-icon {
+    width: 20px;
+    height: 20px;  
+    margin-right: 3px;
+    vertical-align: middle;
+}
+.login-page {
+    background-color: #ecf0f5;
+}
+.login-page .activate-store {
+    display: block;
+}
+.login-box-body .list-group-item {
+    padding: 10px;
+}
+#credentials {
+    margin-top: 10px;
+}
+#credentials .table {
+    margin-bottom: 0;
+}
+#credentials .table td {
+    cursor: pointer;
+}
+.copyright {
+    margin-top: 20px;
+}
+/* Login style end */

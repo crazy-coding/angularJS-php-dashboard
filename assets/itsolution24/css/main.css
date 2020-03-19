@@ -1,0 +1,1676 @@
+/*
+ ***********************************************************
+ ***********************************************************
+ *
+ *  Product Name  :   POS & Advanced Stock Management System
+ *  Product URI   :   http://itsolution24.com/pos
+ *  Version       :   1.0.0
+ *  Author        :   ITsolution24
+ *  Author URI    :   ITsolution24.com
+ *  License       :   MIT
+ *  License URI   :   
+ *
+ *
+ *  Core: General Layout Style
+ * 
+ ************************************************************
+ ************************************************************
+ */
+
+/*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+ * TABLE OF CONTENTS
+ *_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+ * 1.0. GENERAL
+        1.01. Bootstrap Element
+        1.02. Modal Window
+        1.03. Overlay Mask Window
+        1.04. Select2 jQuery Plugin
+        1.05. Sweet Alert jQuery Plugin
+        1.06. jQuery UI Autocomplete Scrollbar
+        1.07. Logo and Favicon Upload
+        1.08. Default width class
+ * 2.0. TOP MENU BAR
+ * 3.0. MAIN SIDEBAR
+        3.01 Sidebar Submenu
+ * 4.0. MAIN CONTENT
+        4.01. Dashboard Shortcut Button
+        4.02. Product
+        4.03. Customer
+        4.04. Supplier
+        4.05. Datatable
+        4.06. Invoice
+        4.07. Overview Report
+        4.08. Tax Report
+        4.09. Stock Report
+        4.10. Password
+        4.11. Store
+        4.12. Backup
+        4.13. Expense
+        4.14. Filemanager
+
+/*                                                                             *
+ *=============================================================================*
+ *                                1.0.  START GENERAL                          *
+ *=============================================================================*
+ *                                                                             *
+ */
+a:focus, 
+a:hover, 
+a:active {
+    outline: 0 none;
+}
+hr {
+    margin: 5px 0;
+}
+.pointer {
+    cursor: pointer;
+}
+.btn, 
+.alert, 
+.label, 
+input, 
+textarea {  
+    max-width: 100%;
+    outline: 0 none;
+}
+label .required {
+    color: #f9264c;
+    font-style: normal;
+    margin-left: 3px;
+}
+.btn, 
+.alert, 
+input, 
+textarea,
+.dropdown-menu,
+.dt-button,
+.list-group-item {  
+    border-radius: 0;
+}
+.label {
+    border-radius: 20px;
+}
+.p-0{
+    padding: 0;
+
+}
+.pl-10 {
+    padding-left: 10px;
+}
+.m-0{
+    margin:0;
+}
+.mt-5 {
+    margin-top: 5px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.txt-medium {
+    font-size: 12px;
+}
+.txt-muted {
+    color: #ddd!important;
+}
+.heighlight {
+    z-index: 1280;
+}
+.input-highlight {
+    border: 1px solid #dd4b39;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+.soft-hidden {
+    display: none;
+}
+.soft-display {
+    display: block;
+}
+.alert {
+    padding: 10px;
+}
+label.control-label span:after {
+    font-family: FontAwesome;
+    color: #1e91cf;
+    content: "\f059";
+    margin-left: 4px;
+}
+.btn.btn-box-tool.add-new-btn {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 100%;
+  text-align: right;
+  margin-top: -5px;
+  height: 100%;
+  padding-right: 10px;
+  outline: none;
+}
+/*Start Table styles*/
+.table-row {
+    display: table-row!important;
+}
+.table {
+    width: 100%!important;
+}
+.table>tfoot > tr > th, 
+.table>thead > tr > th {
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+.table>tbody > tr > th, 
+.table>tbody > tr > td, 
+.table>tfoot > tr > td, 
+.table>tfoot > tr > th, 
+.table>thead > tr > td, 
+.table>thead > tr > th {
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+.table th {
+    font-size: 90%;
+}
+.table.fixedHeader-floating {
+    width: auto!important;
+}
+/*End Table style*/
+
+/* Filter Box */
+#filter-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1250;
+}
+#filter-box .jumbotron {
+    margin-bottom: 0;
+    background-color:#fff;
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+}
+#filter-box input {
+    font-size: 1.8em;
+    font-style: italic;
+    color: #999;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+#filter-box button {
+    border: 2px solid #ea5a48;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.65);
+}
+#show-filter-box .svg-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+#close-filter-box {
+    position: relative;
+    text-align: center;
+}
+#close-filter-box {
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 30px 10px;
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+#close-filter-box span{
+    font-size:2rem;
+    color:#ddd;
+}
+.filter-searchbox {
+    width: 100%;
+    border: 1px solid #dddddd;
+}
+/* End Filter Box*/
+
+/* Start Pos Pattern*/
+ul.pos-pattern li {
+    float: left;
+    cursor: pointer;
+    border: 3px solid #ffffff;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    box-shadow: 0 0 1px rgba(0,0,0,0.5);
+    margin: 0 10px 10px 0;
+}
+
+ul.pos-pattern li img {
+    width: 100px;
+    height: 100px;
+}
+
+ul.pos-pattern li:hover {
+    border-color: #ff1313;
+}
+
+ul.pos-pattern li.selected {
+    border-color: #ff1313;
+}
+.pos-payment-done{
+     margin-top:20px;
+     border:none;
+}
+/*End Pos Pattern*/
+
+/*Start Permission Area */
+.permission-list h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    padding: 0 0 0 5px;
+}
+.permission-list .col-sm-3 {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.permission-list .col-sm-3:first-child {
+    padding-left: 15px;
+}
+.permission-list .col-sm-3:last-child {
+    padding-right: 15px;
+}
+.permission-list .well {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #ffffff;
+    border-radius: 0;
+}
+.permission-list .well label {
+    font-size: 1.2rem;
+}
+/*End Permission Area*/
+
+.pagination > li > a, 
+.pagination > li > span {
+    padding: 0 5px;
+}
+.main-header .svg-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+.profile-heading .info-box, 
+.profile-heading .info-box .info-box-icon,
+.profile-heading .contact .box {
+    min-height: 223px;
+}
+.box, .small-box {
+    border-radius: 0;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+}
+.box-title {
+    font-weight: 700;
+}
+.small2{
+    font-size: 17px;
+    margin-top: 20px;
+    text-align: center;
+    white-space: nowrap;
+    overflow:hidden;
+}
+.info-box {
+    border-radius: 0;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+}
+.bs-example {
+    font-family: sans-serif;
+    position: relative;
+    margin: 0;
+}
+.td-thick-border {
+    border-bottom: 1px solid #dddddd!important;
+}
+.store-selector .selector {
+    padding: 3px 10px;
+}
+.form-control[disabled], 
+.form-control[readonly], 
+fieldset[disabled] .form-control {
+    background-color:#f9f9f9!important;
+}
+.preview-thumbnail {
+    position: relative;
+    width: 80px;
+    height: 75px;
+    overflow: hidden;
+}
+.preview-thumbnail a {}
+.preview-thumbnail img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+.dashboard [class^="col-"] {
+    padding-right: 3px;
+}
+.dashboard .small-box,
+.dashboard .panel {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+    .usergroup .modal-lg {
+        width: 90%;
+    }
+}
+
+/*
+---------------------------------------
+    1.01. Start Bootstrap Element 
+---------------------------------------
+*/
+.box-no-border {
+    border-top: none;
+}
+.well {
+    border-radius:0;
+}
+.well .searchbox input {
+    padding: 5px;   
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #dddddd;
+}
+.store-well {
+    height: 150px; 
+    overflow: auto;
+    margin-bottom:2px;
+}
+.product-well, 
+.currency-well, 
+.payment_method-well {
+    height: 300px;
+    overflow: auto;
+}
+.permission-well {
+    height: 222px;
+    overflow: auto;
+}
+#backup .well {
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    border: 3px solid #ffffff;
+    background-color: #fdfdfd;
+    height: 250px; 
+    overflow: auto;
+    border-radius:0;
+}
+.nav > li > a {
+    padding: 9px 10px;
+}
+/* End Bootstrap Element */
+
+/*
+---------------------------------------
+    1.02. Start Modal Window
+---------------------------------------
+*/
+.modal-open {
+    margin-right: 17px;
+}
+.password-change.modal-open {
+    margin-right: 0;
+}
+.modal-header {
+    padding: 10px 10px;
+}
+.modal-header .close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    opacity: 1;
+    outline:none;
+    z-index: 1050;
+}
+.modal-header .close > span {
+    color: #ff2525;
+    text-shadow: none;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border: 2px solid #ffffff;
+    font-size: 3rem;
+    display: block;
+    background-color: #f5f5f5;
+    padding: 0 7px;
+    opacity: 1!important;
+    border-radius: 50px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+.modal-header .close:hover > span {
+    color: #ffffff;
+    background-color: #ff2525;
+}
+.modal-title {
+    font-size: 2rem;
+}
+.modal-body .sub-title {
+    color: #333333;
+    font-size: 1.5rem;
+    background-color: #fefff7;
+    margin: 0 0 10px 0;
+    padding: 8px 10px;
+    border: 1px solid #ddd
+}
+.modal-body {
+    padding: 1em;
+}
+.modal-dialog .box-body {
+    padding: 2em;
+}
+.bootboox-container {
+    min-height: 350px;
+    overflow-y: scroll;
+}
+.swal-modal, .swal-button {
+    border-radius: 0;
+}
+/* End Modal Window */
+
+/*
+---------------------------------------
+    1.03. Start Overlay Mask Window 
+---------------------------------------
+*/
+.overlay { 
+    overflow: hidden;
+    max-height: 100%;
+    max-width: 100%;
+}
+.overlay:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    bottom: 0; 
+    right: 0;
+    z-index: 1000;
+    opacity:.8;
+    position: fixed; 
+    background: #000000;
+}
+.overlay-loader { 
+    overflow: hidden;
+    max-height: 100%;
+    max-width: 100%;
+}
+.overlay-loader:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    bottom: 0; 
+    right: 0;
+    z-index: 1250;
+    opacity: .8;
+    position: fixed; 
+    background: #eef9ff;
+}
+.overlay-loader:before {
+    content: '';
+    background: url(../img/loading2.gif) no-repeat;
+    width: 64px;
+    height: 64px;
+    top: 50%; 
+    left: 50%;
+    margin-top: -32px;
+    margin-left: -32px;
+    z-index: 1251;
+    opacity: 1;
+    position: fixed;
+}
+/* End Overlay Mask Window */
+
+/*
+---------------------------------------
+    1.04. Start Select2 jQuery Plugin
+---------------------------------------
+*/
+.select2 {
+    min-width: 120px;
+}
+.select2-dropdown--below {
+    box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+}
+.select2-dropdown--above {
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.5);
+}
+.select2-container--default .select2-selection--single {
+    border: 1px solid #ccc;
+    border-radius: 0;
+}
+.select2-container .select2-selection--single {
+    height: 34px;
+}
+/* End Select2 jQuery Plugin */
+
+/*
+---------------------------------------------
+    1.05. Start Sweet Alert jQuery Plugin
+---------------------------------------------
+*/
+.sweet-alert {
+    border-radius: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+.sweet-alert .btn {
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 1px rgba(0,0,0,0.5);
+}
+/* End Seweet Alert jQuery Plugin */
+
+/*
+------------------------------------------------
+    1.06. Start jQuery UI Autocomplete Scrollbar
+------------------------------------------------
+*/
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 5px;
+} 
+.ui-widget-content {
+    border-radius: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+}
+.ui-menu {
+    z-index: 1053;
+}
+/* End jQuery UI Autocomplete Scrollbar */
+
+/*
+---------------------------------------------
+    1.07. Start Logo and Favicon Upload
+---------------------------------------------
+*/
+.upload-form .loader {
+    display: none;
+    max-width: 20px;
+    max-height: 20px;
+}
+#logo_preview {
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    line-height: 180px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+#favicon_preview {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 900px;
+    color: #c0c0c0;
+    overflow: hidden;
+    margin-top: 50px;
+}
+img#logo,
+img#favicon {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.upload-field{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.upload-field .message {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #d2d6de;
+    border-radius: 0;
+    display: none;
+}
+.file-field {
+    color: #ff2525;
+    padding: 10px;
+    background-color: #ecf0f5;
+    margin: 10px 0;
+    width: 100%;
+    box-shadow: 0 0 2px #333;
+    border: 2px solid #fff;
+}
+.upload-field .message .success {
+    color: #00a65a;
+}
+.upload-field .message .invalid {
+    color: #dd4b39;
+}
+.upload-field .message .error {
+    color: #dd4b39;
+}
+.upload-field .message .error_message {
+    color: #0073B7;
+}
+/* End Logo and Favicon Upload */
+
+/*
+-------------------------------------------
+    1.09. default width class
+-------------------------------------------
+*/
+.w-5{
+    width:10%;
+}
+.w-10{
+    width:10%;
+}
+.w-15{
+    width:15%;
+    max-width: 75px;
+}
+.w-20{
+    width:20%;
+    max-width: 100px;
+}
+
+.w-25{
+    width:25%;
+    max-width: 125px;
+}
+.w-30{
+    width:30%;
+    max-width: 150px;
+}
+.w-35{
+    width:35%;
+    max-width: 170px;
+}
+.w-40{
+    width:40%;
+    max-width: 200px;
+}
+.w-45{
+    width:45%;
+    max-width: 225px;
+}
+.w-50{
+    width:50%;
+    max-width: 250px;
+}
+
+.w-55{
+    width:55%;
+    max-width: 275px;
+}
+.w-60{
+    width:60%;
+    max-width: 300px;
+}
+.w-65{
+    width:65%;
+    max-width: 325px;
+}
+.w-70{
+    width:70%;
+    max-width: 350px;
+}
+.w-75{
+    width:75%;
+    max-width: 375px;
+}
+.w-80{
+    width:80%;
+    max-width: 400px;
+}
+.w-85{
+    width:85%;
+    max-width: 425px;
+}
+.w-90{
+    width:90%;
+    max-width: 450px;
+}
+.w-95{
+    width:95%;
+    max-width: 475px;
+}
+.w-100{
+    width:100%;
+}
+.w-25p{
+    width: 25px;
+}
+.margin-b0{
+    margin-bottom: 0;
+}
+.margin-b20{
+    margin-bottom: 20px;
+}
+.paddingbt-50{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.p-15{
+    padding-right: 15px;
+}
+.mb-0 {
+    margin-bottom: 0!important;
+}
+.mb-10 {
+    margin-bottom: 10px!important;
+}
+.mb-20 {
+    margin-bottom: 20px!important;
+}
+.mt-20 {
+    margin-top: 20px!important;
+}
+.bt-1 {
+    border-top:1px solid #ddd!important;
+}
+.min-w-hundred{
+    min-width: 100px;
+}
+.min-w-eighty{
+    padding:2px; 
+    min-width:80px;
+}
+.h-fourty{
+    height:40px;
+}
+.color-white{
+    color:#ffffff;
+}
+.h-hundredFifty{
+    height: 150px;
+}
+.d-block{
+    display: block;
+}
+/*end default width class*/
+
+
+/*                                                                               *
+ *===============================================================================*
+ *                              2.0. START TOP MENU BAR                               *
+ *===============================================================================*
+ *                                                                               *
+ */
+.sidebar-mini .sidebar-toggle {
+    text-indent: -9999px;
+}
+.sidebar-mini .sidebar-toggle:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #ffffff;
+    border-left: 8px solid transparent;
+}
+.animate-gif img{
+    height: 18px;
+}
+/*End Top Menu Bar*/
+
+/*                                                                             *
+ *=============================================================================*
+ *                               3.0. START MAIN SIDEBAR                       *
+ *=============================================================================*
+ *                                                                             *
+ */
+.user-panel > .info > a:hover {
+    padding-left: 0;
+}
+.sidebar-menu li > a {
+    position: relative;
+    font-size: 14px;
+}
+.sidebar-menu > li > a {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.sidebar-menu .treeview-menu > li > a {
+    padding: 5px 5px 5px 10px;
+}
+.sidebar-menu > li > a > .svg-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+.sidebar-menu > li ul li a .svg-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+.sidebar-collapse .sidebar-toggle {
+    text-indent: -9999px;
+}
+.sidebar-collapse .sidebar-toggle:after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    margin-top: -8px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #ffffff;
+    border-right: 8px solid transparent;
+}
+.sidebar-collapse .user-panel {
+    padding: 3px;
+}
+.fixed-sidebar {
+    position: fixed;
+    padding-top: 0;
+}
+.sidebar-menu .treeview-menu > li > a {
+    font-size: 13px;
+}
+.sidebar a {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.sidebar a:hover {
+    padding-left: 10px;
+}
+.sidebar-menu>li:hover>a:after, .sidebar-menu>li.active>a:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -6px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #eCf0f5;
+}
+.sidebar-collapse .sidebar-menu>li:hover>a:after {
+    right: -9999px;
+}
+#sidebar-bottom {
+    margin-bottom: 150px;
+}
+
+/*
+---------------------------------------
+    3.01. Start Main Sidebar Submenu
+---------------------------------------
+*/
+
+.sidebar-menu .treeview-menu {
+    padding-left: 20px;
+}
+.sidebar-menu .treeview-menu li {
+    border-left: 1px solid #6b7d84;
+    position: relative;
+}
+.sidebar-menu .treeview-menu li:before {
+    content: "";
+    width: 5px;
+    height: 1px;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    border: 1px solid #6b7d84;
+}
+/* End Main Sidebar Submenu */
+
+/*End Side Menu Bar*/
+
+/*                                                                             *
+ *=============================================================================*
+ *                             4.0. START MAIN CONTENT                         *
+ *=============================================================================*
+ *                                                                             *
+ */
+ 
+.content-header > h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.main-header .logo {
+    font-size: 16px;
+}
+.main-header .logo .logo-mini {
+    text-transform: uppercase;
+}
+.main-header .text {
+    vertical-align: middle;
+}
+.password-panel {
+    cursor: pointer;
+}
+.apply-filter a {
+    padding: 2px 10px 2px 10px; 
+    margin-bottom: 5px;
+    border: 2px solid #fff;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+} 
+/*
+------------------------------------------
+    4.01. Start Dashboard Shortcut Button 
+------------------------------------------
+*/
+
+.panel-app {
+    border-radius: 0;
+    border: 2px solid #00c0ef;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.panel-app:hover {
+    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+}
+.panel-app a.panel-app-link {
+    display: block;
+}
+.panel-app .icon {
+    display: block;text-align: center;
+}
+.panel-app .icon img,
+.panel-app .icon svg {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.password-panel .icon svg {
+    width: 120px;
+    height: 120px;
+}
+.total-invoice{
+    font-size:25px;
+    font-weight:700;
+}
+/*Recent Customer in Dashboard*/
+.recent-cusomers {
+    margin-bottom: 0;
+}
+.w-recent-customer{
+    min-height: 128px;
+}
+.w-recent-customer .list-group-item {
+  padding: 1px 0;
+}
+.recent-customer-name{
+    color: #ffffff;
+}
+.banking-box{
+    box-shadow:none;
+    border:1px solid #ddd;
+}
+.deposit-today{
+    background:#9bfbcf;
+    border-radius:0;
+}
+/* End Dashboard Shortcut Button */
+
+
+/*
+---------------------------------------
+    4.02. Start Product 
+---------------------------------------
+*/
+
+#barcode-list {
+    margin-top: 10px;
+}
+#barcode-list td {
+    text-align: center;
+}
+#barcode-list td p {
+    margin: 0;
+}
+#barcode-list td .shop-name {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+#barcode-list td .product-name {
+    font-weight: 700;
+}
+#barcode-list td .code {
+    font-weight: 700;
+}
+#barcode-list td .price {
+    margin-top: 5px;
+}
+#product-product-list .product-head{
+    padding: 0;
+}
+.product-head{
+    padding:0;
+    padding-right:0
+}
+.random_num{
+    padding:1px 10px;
+}
+/*End Product */
+
+/*
+---------------------------------------
+    4.03. Start Customer
+---------------------------------------
+*/
+
+#best-customer {
+    position: relative;
+    text-align: center;
+    height: 255px;
+    color: #3c8dbc;
+    overflow: hidden;
+}
+#best-customer .inner {
+    position: relative;
+    padding-top: 20px;
+    z-index: 10;
+}
+#best-customer .title {
+    font-size: 3rem;
+}
+#best-customer .name {
+    border-radius: 50px;
+    background-color: #fcf8e3;
+    padding: 5px 20px;
+    display: inline-block;
+    border: 2px dotted #3c8dbc;
+}
+#best-customer .amount {
+    font-size: 2.2rem;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-bottom: 2px dotted #0073b7;
+}
+.customer-profile .contact .well {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+/*End Customer*/
+
+/*
+---------------------------------------
+    `4.04. Start Supplier
+---------------------------------------
+*/
+
+.supplier_title {
+    cursor: pointer;
+}
+.supplier_title:hover .title {
+    color: #900000;
+}
+.supplier_products {
+    display: none;
+}
+.supplier-profile .contact .well {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.buying-attachement{
+    position: absolute;
+    clip: rect(0px 0px 0px 0px);
+}
+/*End Supplier*/
+
+/*
+---------------------------------------
+    4.05. Start Datatable
+---------------------------------------
+*/
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_info {
+    display: inline-block;
+    text-align: left;
+}
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_paginate {
+    float: right;
+}
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 5px;
+}
+.dataTables_wrapper .dt-buttons {
+    float: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+}
+.dataTables_wrapper .dt-buttons button {
+    padding: 3px 6px;
+}
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+    bottom: 4px;
+}
+/*datatable loader */
+div.dataTables_processing {
+    z-index: 9999;
+    border: none;
+    margin-left: 0!important;
+    width: 100px!important;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+div.dataTables_wrapper div.dataTables_processing {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    margin-top: -26px;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Datatable Button */
+.dataTables_wrapper .buttons-html5 {
+    border: 1px solid #ccc;
+}
+.dataTables_wrapper .buttons-copy {
+    color: #097894;
+}
+.dataTables_wrapper .buttons-excel {
+    color: #00a65a;
+}
+.dataTables_wrapper .buttons-csv {
+    color: #f39c12;
+}
+.dataTables_wrapper .buttons-pdf {
+    color: #dd4b39;
+}
+/* Start Datatable Button */
+.dataTables_wrapper .buttons-html5 {
+    border: 1px solid #cccccc;
+    border-radius: 0;
+}
+.dataTables_wrapper .buttons-copy {
+    color: #097894;
+}
+.dataTables_wrapper .buttons-excel {
+    color: #00a65a;
+}
+.dataTables_wrapper .buttons-csv {
+    color: #f39c12;
+}
+.dataTables_wrapper .buttons-pdf {
+    color: #dd4b39;
+}
+
+/* Datatable Print Style */
+.dt-print-view .dt-print-heading {
+    text-align: center;
+}
+.dt-print-view .dt-print-heading .title {
+    font-size: 22px;
+    margin: 0;
+}
+.dt-print-view .dt-print-heading p {
+    margin-bottom: 5px;
+}
+.dt-print-view .dt-print-heading .logo {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+.dt-print-view h1 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+/*End Datatable*/
+
+/*
+---------------------------------------
+    4.06. Start Invoice
+---------------------------------------
+*/
+
+#invoice {
+    font-size: 90%;
+    padding: 20px 50px;
+}
+#invoice .table {
+    border: none;
+}
+#invoice .table td {
+    padding: 2px;
+    border: none;
+}
+#invoice .logo img{
+    width: 60px;
+}
+.invoice-from{
+    vertical-align: top !important;
+}
+.invoice-to{
+    vertical-align: top!important; 
+}
+/* Start Cashier */
+#invoice .invoice_authority {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+}
+#invoice .invoice_authority .name {
+    padding: 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+#invoice .invoice_authority .name span {
+    display: inline-block;
+    border-bottom: 1px solid #dddddd;
+    padding: 5px;
+}
+.buy-invoice{
+    margin-bottom: 0;
+}
+.invoice-header-info.barcodes {
+    text-align: center;
+}
+.invoice-header-info.barcodes img {
+    display: inline-block;
+}
+.font-size18{
+    font-size: 18px;
+}
+/*End Invoice*/
+
+/*
+---------------------------------------
+    4.07. Start Overview Report
+---------------------------------------
+*/
+
+#overview-report table td {
+    width: 33.3333%;
+}
+#overview-report table td.o-50 {
+    width: 50%;
+}
+#overview-report table td.o-50:first-child {
+    border-right:1px solid #fff;
+}
+#overview-report table .info-box {
+    min-height: 130px;
+}
+#overview-report table .info-box-icon {
+    height: 130px;
+}
+#overview-report table .info-box-text {
+    font-size: 1.8em;
+}
+#overview-report table-table{
+    text-transform: uppercase;
+}
+#overview-report table-table .total-sell{
+    background-color: #fff4c8;
+}
+#overview-report table-table .tax-amount{
+    background-color: #d3f7ff;
+}
+#overview-report table-table .due-amount{
+    background-color: #ffdbd6;
+}
+#overview-report table-table .buying-amount{
+    background-color: #ded5fb;
+}
+#overview-report table-table .due-paid{
+    background-color:#deffd3;
+}
+#overview-report table-table .cash-recieved{
+    background-color: #ffffff;
+}
+#overview-report table-table .expense-amount{
+    background-color: #fff0ee;
+}
+#overview-report table-table .customer-table-data.no-border-bottom {
+    border-bottom: 1px solid transparent;
+}
+.custom-table-header {
+    display: table-header-group;   
+}
+.custom-table {
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+.custom-table-body {
+    display: table-row-group;
+}
+.custome-table-row {
+    display: table-row;
+    
+}
+.customer-table-data {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    height: 180px;
+}
+.customer-table-data h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.custom-table-header.custome-table-row {
+    width: 100%;
+}
+.custom-table-head {
+    width:100%;
+}
+table.profit_calc > tbody > tr > td {
+    padding-top: 6px;
+    padding-bottom: 5px;
+}
+/*End Overview Report*/
+
+/*
+--------------------------------------------------
+     4.08. Tax Report
+-------------------------------------------------
+*/
+.tax-values .small-box {
+  padding: 10px;
+  text-align: center;
+}
+.tax-values .small-box h4 {
+  font-size: 22px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+.bblue {
+  background: blue;
+  color: #fff;
+}
+.bpurple {
+  background: purple;
+  color: #fff;
+}
+.borange {
+  background: orange;
+  color: #fff;
+}
+.bred {
+  background: red;
+  color: #fff;
+}
+.bolive {
+  background: olive;
+  color: #fff;
+}
+
+
+/*
+--------------------------------------------
+     4.09. Start Stock Report
+--------------------------------------------
+*/
+#reprot_stock_parent_wrapper .select2 {
+    width: 280px!important;
+}
+#reprot_stock_parent_wrapper span[aria-labelledby="select2-sup_id-container"] {
+    box-shadow: -2px 2px 3px rgba(0,0,0,0.3);
+}
+#reprot_stock_parent_wrapper span[aria-labelledby="select2-sup_id-container"] {
+    height: 30px;
+}
+#reprot_stock_parent_wrapper .select2-container--default .select2-selection--single, .select2-selection .select2-selection--single {
+    padding: 4px 6px;
+}
+#reprot_stock_parent_wrapper .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 23px;
+}
+#reprot_stock_parent_wrapper span[aria-labelledby="select2-sup_id-container"] { 
+    border-radius: 20px;
+}
+#reprot_stock_parent_wrapper tbody tr.group {
+    cursor: pointer;
+}
+#reprot_stock_parent_wrapper tbody tr.odd,
+#reprot_stock_parent_wrapper tbody tr.even {
+    display: none;
+    opacity: 1;
+}
+/* End Stock Report */
+
+/*
+-------------------------------------------
+    4.10. Start Password
+-------------------------------------------
+*/
+.password-style{
+    font-size: 17px;
+    margin-top: 20px;
+    text-align: center;
+}
+/* End Password*/
+
+/*
+------------------------------------------
+    4.11. Start Store
+------------------------------------------
+*/
+.logo-favicon{
+    width:30px;
+    height:30px;
+    margin-left:10px;
+  }
+.store-m15{
+    margin-bottom:15px;
+}
+#store-form ul.nav.nav-tabs {
+    margin-bottom: 15px;
+}
+/*End Store*/
+
+/*
+-------------------------------------------
+    4.12. Start Backup
+-------------------------------------------
+*/
+.backup-nav {
+    margin-bottom:15px;
+}
+/*End Backup*/
+
+/*
+-------------------------------------------
+    4.13. Start Expense
+-------------------------------------------
+*/
+.expense-m {
+    margin-bottom:0;
+}
+/*End Expense*/
+
+/*
+--------------------------------------------
+   4.14. Filemanager area start
+--------------------------------------------
+*/
+.filemanager-width{
+    width:100%;
+}
+.filemanager-open .modal-lg {
+      width: 95%;
+}
+#close-filemanger {
+    top: 3px;
+    right: 3px;
+}
+/* End Filemanager area */
+
+/*END MAIN CONTENT*/
+
+.action-button-sm {
+    margin-left: 12px;
+}
+.action-button-sm .col-md-4 {
+    min-width: 100px;
+    width: auto!important;
+    padding-left: 3px;
+}
+.action-button-sm .panel {}
+.action-button-sm .panel-body {
+    padding: 5px;
+}
+.action-button-sm .panel-app-link {}
+.action-button-sm h2 {
+    margin: 0;
+}
+.action-button-sm .svg-icon {
+    width: 20px!important;
+    height: 20px!important;
+}
+.action-button-sm .small {
+    margin: 0;
+}
+.action-button-sm .small2 {
+    font-size: 13px;
+}
+
+/*for gift card*/
+
+.card {
+ width: 353px; 
+ height: 450px; 
+ border-radius: 10px;
+ margin: 15px auto; 
+ color: #FFF; 
+}
+.card .card_img {
+ position: absolute; 
+ top: 0; 
+ left: 0; 
+ width: 353px; 
+ height: 206px; 
+}
+.card .front { 
+    position: relative; 
+}
+.card .back { 
+    margin-top: 230px; 
+    position: relative; 
+}
+.card .middle { 
+    display: table-cell; 
+    vertical-align: middle; 
+    width: 353px; 
+    height: 206px; 
+}
+.card .card-content { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 55555; 
+    height: 206px; 
+    width: 100%; 
+    display: block; 
+    padding: 10px; 
+    text-align: center; 
+}
+@media print {
+    .pos-content-wrapper {
+        display: none!important;
+    }
+}
+.giftcard-barcode{
+    position:absolute;
+    left:0px;
+    bottom:12px;
+    width:353px;
+    background:#FFF!important;
+    padding:3px;
+}
+/*gift card end*/
+
+/*                                                                             *
+ *=============================================================================*
+ *                                4.0. Payment form start                         *
+ *=============================================================================*
+ *                                                                             *
+ */
+ .pmethod_item {
+    margin: 0px;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0!important;
+}
+.checkout-payment-option {
+    padding-left: 0px;
+    overflow:hidden;
+}
+.checkout-payment-option .title{
+    margin:0 0 10px 0;
+}
+.checkout-payment-option .bootboox-container {
+    border-left:solid 1px #DEDEDE;
+    overflow-y:scroll;
+    padding:15px;
+    width:103%;
+}
+.checkout-payment-option .full-paid {
+    margin-bottom:10px; 
+    width: 100%; 
+    line-height: 45px; 
+    font-size: 20px;
+    border-radius: 50px!important;
+    border: 2px solid #eee;
+}
+.checkout-payment-option .full-due {
+    margin-bottom:20px; 
+    width: 100%; 
+    line-height: 45px; 
+    font-size: 20px;
+    border-radius: 50px!important;
+    border: 2px solid #eee;
+}
+
+/*End Payment Form*/
+
+/* Start noscript style */
+
+.noscript {}
+.global-site-notice {
+    display: table;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 1250;
+    top: 0;
+    left: 0;
+    vertical-align: middle;
+}
+.global-site-notice .notice-inner {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* End noscript style */

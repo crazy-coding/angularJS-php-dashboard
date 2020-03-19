@@ -1,0 +1,74 @@
+/*
+ * CSS style only for printing purpose
+ *
+ */
+
+@media print { 
+	* {
+		border: none;
+	}
+	@page {
+		size: auto;
+		margin: 10px;
+	}
+	body {
+		margin: 1em;
+	}
+	a,
+	.no-print, 
+	.modal-open 
+	.wrapper, 
+	.close,
+	.main-footer, 
+	.btn, 
+	.view-link {
+		display: none;
+	}
+	.box {
+		border-top: none!important;
+	}
+	.box-header.with-border {
+		border-bottom: none;
+	}
+
+
+	/*
+	 *-------------------------------------------
+	 * 4.0. INVOICE START
+	 *-------------------------------------------
+	 */
+ 	body.invoice-page {
+ 		padding: 5px;
+ 	}
+ 	body.invoice-page .box-body {
+ 		padding: 0;
+ 	}
+	body.invoice-page [class^="col-"] {
+	 	padding: 0;
+	}
+	body.invoice-page .row {
+	 	margin: 0;
+	}
+	#invoice {
+		width: 100%; 
+		margin: 0 auto;
+	} 
+	#invoice .invoice-header td {
+		border: none;
+	}
+	#invoice .invoice-note {
+		display: none;
+	}
+	#invoice .powered-by {
+		border-top: 1px solid #f5f5f5;
+	}
+	body.invoice-page .footer-actions {
+		display: none;
+	}
+
+	/*
+	 *--------------------------------------------
+	 * 4.0. INVOICE END
+	 *--------------------------------------------
+	 */
+}
